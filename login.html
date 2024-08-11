@@ -19,18 +19,18 @@
     <nav class="nav">
         <input type="checkbox" id="nav-check">
         <div class="logo">
-          <span class="text">
-            Go Trip
-          </span>
+            <span class="text">
+                Go Trip
+            </span>
         </div>
         <div class="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
-        
+
         <ul class="nav-list">
             <li><a href="/">Home</a></li>
             <li><a href="tour.html">Destination</a></li>
@@ -39,18 +39,13 @@
 
 
         </ul>
-      </nav>
+    </nav>
     <main>
         <div class="container">
             <div class="card">
-                <h3>Register</h3>
-                <form id="registerForm">
-                    <div class="input-control">
+                <h3>Login</h3>
+                <form id="loginForm">
 
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required minlength="3" maxlength="15">
-                        <div class="errorMessages" id="usernameError"></div>
-                    </div>
                     <div class="input-control">
 
                         <label for="email">Email</label>
@@ -63,18 +58,17 @@
                         <input type="password" id="password" name="password" required>
                         <div class="errorMessages" id="passwordError"></div>
                     </div>
-                    <button type="submit" id="submit">Register</button>
+                    <button type="submit" id="submit">Login</button>
+
                     <div class="redirect">
-                        <p class="label">Have an account? <a href="login.html">Login</a></p>
+                        <p class="label">Don't have an account? <a href="register.html">Register</a></p>
 
                     </div>
-                
                 </form>
 
             </div>
         </div>
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-row">
@@ -111,29 +105,24 @@
 
 <script>
     // Hamburger menu toggle
-   
+
 
     const submit = document.getElementById("submit");
-    const registerForm = document.getElementById("registerForm");
-    const usernameError = document.getElementById("usernameError");
+    const loginForm = document.getElementById("loginForm");
     const emailError = document.getElementById("emailError");
     const passwordError = document.getElementById("passwordError");
 
-    registerForm.addEventListener("submit", function (e) {
+    loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const { username, email, password } = registerForm.elements
+        const { email, password } = loginForm.elements
 
-        usernameError.innerHTML = "";
         emailError.innerHTML = "";
         passwordError.innerHTML = "";
 
         let hasError = false;
 
-        if (!username.value.trim() || !isValidUsername(username.value)) {
-            displayError(usernameError, "Username is between 3 and 15 characters, don't.");
-            hasError = true;
-        }
+
         if (!email.value.trim() || !isValidEmail(email.value)) {
             displayError(emailError, "Please enter a valid email address.");
             hasError = true;
@@ -147,7 +136,7 @@
 
         if (!hasError) {
 
-            window.location.href = "login.html"
+            window.location.href = "/"
         }
 
 
@@ -156,9 +145,7 @@
     function displayError(element, message) {
         element.innerHTML = `<div>${message}</div>`
     }
-    function isValidUsername(username) {
-        return /^[a-zA-Z0-9_-]{3,15}$/.test(username);
-    }
+
 
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

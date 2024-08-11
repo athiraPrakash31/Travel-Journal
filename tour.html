@@ -22,7 +22,7 @@
                 Go Trip
             </span>
         </div>
-        <div class="nav-btn">
+        <div class="nav-btn" onclick="toggleMenu()">
             <label for="nav-check">
                 <span></span>
                 <span></span>
@@ -32,9 +32,11 @@
 
         <ul class="nav-list">
             <li><a href="/">Home</a></li>
-            <li><a href="tour.html">Tours</a></li>
+            <li><a href="tour.html">Destination</a></li>
             <li><a href="package.html">Packages</a></li>
-            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+
+            <li><a href="login.html">Login</a></li>
 
         </ul>
     </nav>
@@ -43,8 +45,12 @@
 
     <div class="container">
         <h1>Explore Your Destination!</h1>
+
+
+        <h3 style="text-align: center;margin: 20px;">PARIS</h3>
         <div class="row">
             <div class="col">
+              
                 <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg"
                     alt="">
             </div>
@@ -136,8 +142,50 @@
         </div>
     </div>
 
-
-
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <!-- About Us Section -->
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>
+                        Go Trip is your one-stop solution for all your travel needs. We offer the best travel packages, 
+                        destination guides, and travel planning services to make your trip unforgettable.
+                    </p>
+                </div>
+    
+                
+    
+                <!-- Social Media Section -->
+                <div class="footer-col">
+                    <h3 class="socials">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Go Trip. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
+<script>
+     function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('show');
+        }
+    document.addEventListener("DOMContentLoaded",()=>{
+        const rows = document.querySelectorAll('.row');
+        rows.forEach((row,index)=>{
+            row.style.animationDelay = `${index * 0.3}s`
+        })
+    })
+</script>
 </html>
