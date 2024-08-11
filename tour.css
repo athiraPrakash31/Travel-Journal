@@ -76,7 +76,7 @@ body {
 
 h1{
     text-align: center;
-    padding: 20px;
+    margin: 20px 0;
 }
 
 .container {
@@ -162,7 +162,7 @@ h1{
 }
 
 .col p {
-    font-size: larger;
+    font-size:medium;
     line-height: 1.5;
     text-align: justify;
 }
