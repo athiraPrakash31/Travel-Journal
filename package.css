@@ -12,7 +12,6 @@ body {
     font-weight: bold;
     font-size: larger;
     font-family: "Gupter", serif;
-        font-display: swap; /* Add this line */
 }
 
 .nav {
@@ -36,7 +35,6 @@ body {
 
 
 .text {
-  
     color: #fff;
 }
 
@@ -72,22 +70,13 @@ body {
     display: none;
 }
 
-/* cards */
-
-
-
-
-  
+/* cards */  
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 150px;
     padding: 100px 50px 50px 50px;
-    align-items: stretch;
-
-
-
-    
+    align-items: stretch;   
   }
   
   .container {
@@ -104,20 +93,15 @@ body {
     transform-origin: center;
     transition: transform 0.5s ease;
     background-color: aliceblue;
-    
-    
-
   }
+
   .grid > article:hover {
     transform: scale(1.1);
-
   }
   
   .grid > article img {
     max-width: 100%;
   }
-  
-
   
   .grid .texts {
     padding: 20px;
