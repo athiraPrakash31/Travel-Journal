@@ -84,10 +84,6 @@ body {
     grid-gap: 150px;
     padding: 100px 50px 50px 50px;
     align-items: stretch;
-
-
-
-    
   }
   
   .container {
@@ -104,8 +100,7 @@ body {
     transform-origin: center;
     transition: transform 0.5s ease;
     background-color: aliceblue;
-    width: 250px;
-    height: auto;
+    
     
 
   }
@@ -115,7 +110,7 @@ body {
   }
   
   .grid > article img {
-    
+    max-width: 100%;
   }
   
 
