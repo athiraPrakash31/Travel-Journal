@@ -198,7 +198,7 @@ footer {
     color: #fff;
   }
 /* media query */
-@media (max-width:768px) {
+@media only screen and (max-width:768px) {
     .nav>.nav-btn {
       display: inline-block;
       position: absolute;
