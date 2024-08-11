@@ -12,6 +12,7 @@ body {
     font-weight: bold;
     font-size: larger;
     font-family: "Gupter", serif;
+    font-display: swap; /* Add this line */
 }
 
 .nav {
