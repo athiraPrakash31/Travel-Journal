@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Trip - packages</title>
      <!-- Google Fonts -->
-     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
-     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"></noscript>
- 
-     <!-- Preloading Font Awesome CSS -->
-     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
- 
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
      <!-- Custom CSS -->
      <link rel="stylesheet" href="package.css">
 </head>
@@ -49,7 +47,7 @@
     <div class="container">
         <main class="grid">
           <article>
-            <img src="./images/paris.jpg"  width="100%" alt="Sample photo">
+            <img srcset="./images/paris.jpg 480w, ./images/paris.jpg 800w" src="./images/paris.jpg" sizes="(max-width: 600px) 480px, 800px" width="100%" alt="Sample photo">
             <div class="texts">
               <h2>Paris</h2><br>
               <p>Package: &#8377; 2,76,580 </p>
